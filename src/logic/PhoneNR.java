@@ -3,13 +3,13 @@ package logic;
 import java.util.regex.*;
 
 public class PhoneNR {
-	private String phonenr;
+	private String phoneNR;
 	
-	public boolean validateNR(String number){
+	public boolean validateNR(){
 
-	String pattern = "^([+]?\\d{1,4}[-\\s]?|)\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{4}$";
+	String regex = "^([+]?\\d{1,4}[-\\s]?|)\\d{3}[-\\s]?\\d{3}[-\\s]?\\d{4}$";
 
-        if (number.matches(pattern)) {     
+        if (phoneNR.matches(regex)) {     
             return true;
         } else {     
             return false;
