@@ -5,7 +5,7 @@ public abstract class User {
 	private String username, password, role;
 	private Address address; 
 	private Email email;
-	private PhoneNR phonenr;
+	private long phonenr;
 	
 	public int getUserID() {
 		return userID;
@@ -43,10 +43,10 @@ public abstract class User {
 	public void setEmail(Email email) {
 		this.email = email;
 	}
-	public PhoneNR getPhonenr() {
+	public long getPhonenr() {
 		return phonenr;
 	}
-	public void setPhonenr(PhoneNR phonenr) {
+	public void setPhonenr(long phonenr) {
 		this.phonenr = phonenr;
 	}
 	
@@ -58,7 +58,7 @@ public abstract class User {
 	}
 	
 	public User(int userID, String username, String password, String role, Address address, Email email,
-			PhoneNR phonenr) {
+			long phonenr) {
 		super();
 		this.userID = userID;
 		this.username = username;
