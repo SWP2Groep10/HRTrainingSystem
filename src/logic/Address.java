@@ -1,6 +1,6 @@
 package logic;
 
-public class Adress {
+public class Address {
 	private String city, country, street;
 	private int number, postalcode;
 	
@@ -35,7 +35,13 @@ public class Adress {
 		this.postalcode = postalcode;
 	}
 	
-	public Adress(String city, String country, String street, int number, int postalcode) {
+	@Override
+	public String toString() {
+		return "Address [city=" + city + ", country=" + country + ", street=" + street + ", number=" + number
+				+ ", postalcode=" + postalcode + "]";
+	}
+	
+	public Address(String city, String country, String street, int number, int postalcode) {
 		super();
 		this.city = city;
 		this.country = country;
@@ -43,12 +49,4 @@ public class Adress {
 		this.number = number;
 		this.postalcode = postalcode;
 	}
-	
-	@Override
-	public String toString() {
-		return "Adress [city=" + city + ", country=" + country + ", street=" + street + ", number=" + number
-				+ ", postalcode=" + postalcode + "]";
-	}
-	
-	
 }

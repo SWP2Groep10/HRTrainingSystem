@@ -1,7 +1,5 @@
 package logic;
 
-import java.util.regex.*;
-
 public class PhoneNR {
 	private String phoneNR;
 	

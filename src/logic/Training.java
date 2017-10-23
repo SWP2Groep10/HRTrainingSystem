@@ -3,20 +3,17 @@ package logic;
 import java.sql.Date;
 
 public class Training {
+	private Location location;
 	private int trainingID, locationID;
 	private String survey;
-	private Date periodOfTime;
+	private int duration; //in minutes
 	private boolean status;
-	
-	public Training(int trainingID, int locationID, String survey, Date periodOfTime, boolean status) {
-		super();
-		this.trainingID = trainingID;
-		this.locationID = locationID;
-		this.survey = survey;
-		this.periodOfTime = periodOfTime;
-		this.status = status;
+	public Location getLocation() {
+		return location;
 	}
-
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 	public int getTrainingID() {
 		return trainingID;
 	}
@@ -35,11 +32,11 @@ public class Training {
 	public void setSurvey(String survey) {
 		this.survey = survey;
 	}
-	public Date getPeriodOfTime() {
-		return periodOfTime;
+	public int getDuration() {
+		return duration;
 	}
-	public void setPeriodOfTime(Date periodOfTime) {
-		this.periodOfTime = periodOfTime;
+	public void setDuration(int duration) {
+		this.duration = duration;
 	}
 	public boolean isStatus() {
 		return status;
@@ -47,12 +44,14 @@ public class Training {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "TrainingID= " + trainingID + ", LocationID= " + locationID + ", Survey= " + survey
-				+ ", PeriodOfTime= " + periodOfTime + ", Status= " + status;
+		return "Training [location=" + location + ", trainingID=" + trainingID + ", locationID=" + locationID
+				+ ", survey=" + survey + ", duration=" + duration + ", status=" + status + "]";
 	}
+
+	
 	
 	
 }

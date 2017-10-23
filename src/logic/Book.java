@@ -1,10 +1,25 @@
 package logic;
 
 public class Book {
+	private String publisher;
+	private int year;
 	private String isbnID;
 	private String author;
 	private String title;
-	private double price;
+	private double cost;
+	
+	public String getPublisher() {
+		return publisher;
+	}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
 	public String getIsbnID() {
 		return isbnID;
 	}
@@ -23,12 +38,31 @@ public class Book {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public double getPrice() {
-		return price;
+	public double getCost() {
+		return cost;
 	}
-	public void setPrice(double price) {
-		this.price = price;
+	public void setCost(double cost) {
+		this.cost = cost;
 	}
+	
+	@Override
+	public String toString() {
+		return "Book [publisher=" + publisher + ", year=" + year + ", isbnID=" + isbnID + ", author=" + author
+				+ ", title=" + title + ", cost=" + cost + "]";
+	}
+	
+	public Book(String publisher, int year, String isbnID, String author, String title, double cost) {
+		super();
+		this.publisher = publisher;
+		this.year = year;
+		this.isbnID = isbnID;
+		this.author = author;
+		this.title = title;
+		this.cost = cost;
+	}
+	
+	
+	
 	
 	
 }
