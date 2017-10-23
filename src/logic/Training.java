@@ -50,6 +50,15 @@ public class Training {
 		return "Training [location=" + location + ", trainingID=" + trainingID + ", locationID=" + locationID
 				+ ", survey=" + survey + ", duration=" + duration + ", status=" + status + "]";
 	}
+	public Training(Location location, int trainingID, int locationID, String survey, int duration, boolean status) {
+		super();
+		this.location = location;
+		this.trainingID = trainingID;
+		this.locationID = locationID;
+		this.survey = survey;
+		this.duration = duration;
+		this.status = status;
+	}
 
 	
 	
