@@ -1,18 +1,13 @@
 package logic;
 
-//import java.sql.Date;
-import java.util.Arrays;
+import java.sql.Date;
 
 public class Training {
-	private enum StatusType{EXPIRED, ONGOING, PLANNED};
-	
-	private User[] attendinglist;
 	private Location location;
 	private int trainingID, locationID;
-	private Survey survey;
+	private String survey;
 	private int duration; //in minutes
-	private StatusType status;
-	
+	private boolean status;
 	public Location getLocation() {
 		return location;
 	}
@@ -31,10 +26,10 @@ public class Training {
 	public void setLocationID(int locationID) {
 		this.locationID = locationID;
 	}
-	public Survey getSurvey() {
+	public String getSurvey() {
 		return survey;
 	}
-	public void setSurvey(Survey survey) {
+	public void setSurvey(String survey) {
 		this.survey = survey;
 	}
 	public int getDuration() {
@@ -43,40 +38,28 @@ public class Training {
 	public void setDuration(int duration) {
 		this.duration = duration;
 	}
-	public StatusType getStatus() {
+	public boolean isStatus() {
 		return status;
 	}
-	public void setStatus(StatusType input) {
-		this.status = input;
-	}
-	public User[] getAttendinglist() {
-		return attendinglist;
-	}
-	public void setAttendinglist(User[] attendinglist) {
-		this.attendinglist = attendinglist;
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 	
 	@Override
 	public String toString() {
-		return "Training [attendinglist=" + Arrays.toString(attendinglist) + ", location=" + location + ", trainingID="
-				+ trainingID + ", locationID=" + locationID + ", survey=" + survey + ", duration=" + duration
-				+ ", status=" + status + "]";
+		return "Training [location=" + location + ", trainingID=" + trainingID + ", locationID=" + locationID
+				+ ", survey=" + survey + ", duration=" + duration + ", status=" + status + "]";
 	}
-	
-	public Training(User[] attendinglist, Location location, int trainingID, int locationID, Survey survey,
-			int duration, StatusType statusType) {
+	public Training(Location location, int trainingID, int locationID, String survey, int duration, boolean status) {
 		super();
-		this.attendinglist = attendinglist;
 		this.location = location;
 		this.trainingID = trainingID;
 		this.locationID = locationID;
 		this.survey = survey;
 		this.duration = duration;
-		this.status = statusType;
+		this.status = status;
 	}
-	
-	
-	
+
 	
 	
 	

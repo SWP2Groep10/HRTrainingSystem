@@ -1,20 +1,39 @@
 package logic;
 
-public class HRemployee extends User {
+public class HRemployee {
+	private String firstName, lastName;
 	private String HRemployeeID;
-
 	
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
 	public String getHRemployeeID() {
 		return HRemployeeID;
 	}
-	public void setHRemployeeID(String hRemployeeID) {
-		HRemployeeID = hRemployeeID;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public void setHRemployeeID(String HRemployeeID) {
+		this.HRemployeeID = HRemployeeID;
 	}
 
-	public HRemployee(int userID, String username, String password, String role, Address address, Email email,
-			long phonenr, String hRemployeeID) {
-		super(userID, username, password, role, address, email, phonenr);
-		HRemployeeID = hRemployeeID;
+
+	@Override
+	public String toString() {
+		return "HRemployee [firstName=" + firstName + ", lastName=" + lastName + ", HRemployeeID=" + HRemployeeID + "]";
 	}
-	
+
+	public HRemployee(String firstName, String lastName, String HRemployeeID) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.HRemployeeID = HRemployeeID;
+	}
+
 }
