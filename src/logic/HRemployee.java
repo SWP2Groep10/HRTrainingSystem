@@ -11,7 +11,7 @@ public class HRemployee extends User {
 		HRemployeeID = hRemployeeID;
 	}
 
-	public HRemployee(int userID, String username, String password, String role, Address address, Email email,
+	public HRemployee(int userID, String username, String password, String role, Address address, String email,
 			long phonenr, String hRemployeeID) {
 		super(userID, username, password, role, address, email, phonenr);
 		HRemployeeID = hRemployeeID;
