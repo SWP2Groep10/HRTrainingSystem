@@ -10,7 +10,7 @@ public void setAdminID(int adminID) {
 	this.adminID = adminID;
 }
 
-public Admin(int userID, String username, String password, String role, Address address, Email email, long phonenr,
+public Admin(int userID, String username, String password, String role, Address address, String email, long phonenr,
 		int adminID) {
 	super(userID, username, password, role, address, email, phonenr);
 	this.adminID = adminID;

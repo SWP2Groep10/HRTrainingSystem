@@ -4,7 +4,7 @@ public abstract class User {
 	private int userID;
 	private String username, password, role;
 	private Address address; 
-	private Email email;
+	private String email;
 	private long phonenr;
 	
 	public int getUserID() {
@@ -37,10 +37,10 @@ public abstract class User {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public Email getEmail() {
+	public String getEmail() {
 		return email;
 	}
-	public void setEmail(Email email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	public long getPhonenr() {
@@ -57,7 +57,7 @@ public abstract class User {
 				+ ", address=" + address + ", email=" + email + ", phonenr=" + phonenr + "]";
 	}
 	
-	public User(int userID, String username, String password, String role, Address address, Email email,
+	public User(int userID, String username, String password, String role, Address address, String email,
 			long phonenr) {
 		super();
 		this.userID = userID;
