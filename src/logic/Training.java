@@ -4,7 +4,7 @@ package logic;
 import java.util.Arrays;
 
 public class Training {
-	private enum StatusType{EXPIRED, ONGOING, PLANNED};
+	public enum StatusType{EXPIRED, ONGOING, PLANNED};
 	
 	private User[] attendinglist;
 	private Location location;
